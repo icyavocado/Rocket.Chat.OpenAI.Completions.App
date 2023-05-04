@@ -1,5 +1,6 @@
 {
     "OpenAIChat_API_KEY_LABEL": "API KEY",
+    "OpenAIChat_CHAT_MODEL_LABEL": "OpenAI chat model (default: gpt-3.5-turbo)",
     "OpenAIChat_ORG_LABEL": "Organization (Optional)",
     "OpenAIChat_MAX_TOKENS_LABEL": "Max tokens to return",
     "OpenAIChat_AskChatGPT": "Ask ChatGPT",

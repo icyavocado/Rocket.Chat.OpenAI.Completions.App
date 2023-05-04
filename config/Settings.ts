@@ -6,6 +6,7 @@ import {
 export enum AppSetting {
     NAMESPACE = "OpenAIChat",
     OpenAI_ORG = "openai_organization",
+    OpenAI_CHAT_MODEL = "openai_chat_model",
     OpenAI_API_KEY = "openai_api_key",
     OpenAI_CHAT_DEFAULT_SYSTEM_INSTRUCTION = "openai_chat_default_system_instruction",
     OpenAI_CHAT_MAX_TOKENS = "openai_chat_max_tokens",
@@ -21,6 +22,25 @@ export const settings: Array<ISetting> = [
         hidden: false,
         i18nLabel: AppSetting.NAMESPACE + "_API_KEY_LABEL",
         required: true,
+    },
+    {
+        id: AppSetting.OpenAI_CHAT_MODEL,
+        public: true,
+        type: SettingType.SELECT,
+        packageValue: "gpt-3.5-turbo",
+        hidden: false,
+        i18nLabel: AppSetting.NAMESPACE + "_CHAT_MODEL_LABEL",
+        required: true,
+        values: [
+            {
+                key: "gpt-3.5-turbo",
+                i18nLabel: "gpt-3.5-turbo"
+            },
+            {
+                key: "gpt-3.5-turbo-0301",
+                i18nLabel: "gpt-3.5-turbo-0301",
+            }
+        ]
     },
     {
         id: AppSetting.OpenAI_CHAT_DEFAULT_SYSTEM_INSTRUCTION,

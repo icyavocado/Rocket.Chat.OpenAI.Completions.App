@@ -100,7 +100,7 @@ export class ViewSubmitHandler {
                                 // remove initial break lines
                                 content = content.replace(/^\s*/gm, "");
                                 var before_message = `**Instruction**: ${instruction}\n**Prompt**: ${prompt}`;
-                                var message = before_message + "\n" + content;
+                                var message = before_message + "\n**Answer:** " + content;
 
                                     switch (output_mode) {
                                         case "notification":

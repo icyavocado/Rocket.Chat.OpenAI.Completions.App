@@ -71,7 +71,7 @@ export class OpenAIChatCommand implements ISlashCommand {
                 // remove initial break lines
                 content = content.replace(/^\s*/gm, "");
                 var before_message = `**Instruction**: ${instruction}\n**Prompt**: ${prompt}`;
-                var message = before_message + "\n**Answer:** " + content;
+                var message = before_message + "\n**Response:** " + content;
                 sendMessage(
                     modify,
                     room,

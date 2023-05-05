@@ -5,6 +5,8 @@
     "OpenAIChat_MAX_TOKENS_LABEL": "Max tokens to return",
     "OpenAIChat_AskChatGPT": "Ask ChatGPT",
     "OpenAIChat_SlashCommand_Description": "Ask ChatGPT",
+    "OpenAIChat_Help_SlashCommand_Description": "How to use ChatGPT",
+    "OpenAIChat_HELP": "How to use ChatGPT",
     "OpenAIChat_TEMPERATURE_LABEL": "Temperature (Defaults to 1)",
     "OpenAIChat_DEFAULT_SYSTEM_INSTRUCTION_LABEL": "System Instruction (how the ChatGPT should behave)"
 }

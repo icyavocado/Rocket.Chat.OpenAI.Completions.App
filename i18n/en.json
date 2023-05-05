@@ -1,12 +1,19 @@
 {
-    "OpenAIChat_API_KEY_LABEL": "API KEY",
+    "OpenAIChat_API_KEY_LABEL": "OpenAI Api Key",
+    "OpenAIChat_API_KEY_LABEL_description": "You can create a new API key via https://platform.openai.com/account/api-keys",
     "OpenAIChat_CHAT_MODEL_LABEL": "OpenAI chat model (default: gpt-3.5-turbo)",
+    "OpenAIChat_CHAT_MODEL_LABEL_description": "The Open AI chat model to use. The default value is 'gpt-3.5-turbo'.",
     "OpenAIChat_ORG_LABEL": "Organization (Optional)",
+    "OpenAIChat_ORG_LABEL_description": "An optional field to specify the organization id that this chat pertains to.",
     "OpenAIChat_MAX_TOKENS_LABEL": "Max tokens to return",
+    "OpenAIChat_MAX_TOKENS_LABEL_description": "The maximum number of tokens to return from the OpenAI chat model.",
     "OpenAIChat_AskChatGPT": "Ask ChatGPT",
     "OpenAIChat_SlashCommand_Description": "Ask ChatGPT",
     "OpenAIChat_Help_SlashCommand_Description": "How to use ChatGPT",
-    "OpenAIChat_HELP": "How to use ChatGPT",
+    "OpenAIChat_HELP": "Response for /chat-gpt-help",
+    "OpenAIChat_HELP_description": "Customized message used for fetching documentation and help pages.",
     "OpenAIChat_TEMPERATURE_LABEL": "Temperature (Defaults to 1)",
-    "OpenAIChat_DEFAULT_SYSTEM_INSTRUCTION_LABEL": "System Instruction (how the ChatGPT should behave)"
+    "OpenAIChat_TEMPERATURE_LABEL_description": "The temperature setting controls how creative the OpenAI chat model can be by adjusting the randomness of its responses. The value of temperature ranges from 0 to 1, with a default of 1.",
+    "OpenAIChat_DEFAULT_SYSTEM_INSTRUCTION_LABEL": "System Instruction (how the ChatGPT should behave)",
+    "OpenAIChat_DEFAULT_SYSTEM_INSTRUCTION_LABEL_description": "A field to specify instructions for how the ChatGPT system should behave."
 }

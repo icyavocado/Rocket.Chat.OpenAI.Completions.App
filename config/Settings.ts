@@ -18,7 +18,7 @@ export const settings: Array<ISetting> = [
     {
         id: AppSetting.OpenAI_API_KEY,
         public: true,
-        type: SettingType.STRING,
+        type: SettingType.PASSWORD,
         packageValue: "",
         hidden: false,
         i18nLabel: AppSetting.NAMESPACE + "_API_KEY_LABEL",

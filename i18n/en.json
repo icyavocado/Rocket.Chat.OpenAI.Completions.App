@@ -18,4 +18,6 @@
     "OpenAIChat_DEFAULT_SYSTEM_INSTRUCTION_LABEL_description": "A field to specify instructions for how the ChatGPT system should behave.",
     "OpenAIChat_ENABLE_MENTION": "Enable Mention Responses",
     "OpenAIChat_ENABLE_MENTION_description": "Allow the bot to respond when mentioned in a message thread",
+    "OpenAIChat_SETTING_SECTION_BOT_CONFIG": "Customize your Bot",
+    "OpenAIChat_SETTING_SECTION_OPENAI": "OpenAI"
 }

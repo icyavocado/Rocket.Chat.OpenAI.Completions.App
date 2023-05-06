@@ -25,6 +25,7 @@ export const settings: Array<ISetting> = [
         i18nLabel: AppSetting.NAMESPACE + "_API_KEY_LABEL",
         i18nDescription: AppSetting.NAMESPACE + "_API_KEY_LABEL_description",
         required: true,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_OPENAI"
     },
     {
         id: AppSetting.OpenAI_CHAT_MODEL,
@@ -44,7 +45,8 @@ export const settings: Array<ISetting> = [
                 key: "gpt-3.5-turbo-0301",
                 i18nLabel: "gpt-3.5-turbo-0301",
             }
-        ]
+        ],
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_OPENAI"
     },
     {
         id: AppSetting.OpenAI_CHAT_DEFAULT_SYSTEM_INSTRUCTION,
@@ -56,6 +58,7 @@ export const settings: Array<ISetting> = [
         i18nLabel: AppSetting.NAMESPACE + "_DEFAULT_SYSTEM_INSTRUCTION_LABEL",
         i18nDescription: AppSetting.NAMESPACE + "_DEFAULT_SYSTEM_INSTRUCTION_LABEL_description",
         required: false,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_OPENAI"
     },
     {
         id: AppSetting.OpenAI_ORG,
@@ -66,6 +69,7 @@ export const settings: Array<ISetting> = [
         i18nLabel: AppSetting.NAMESPACE + "_ORG_LABEL",
         i18nDescription: AppSetting.NAMESPACE + "_ORG_LABEL_description",
         required: false,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_OPENAI"
     },
     {
         id: AppSetting.OpenAI_CHAT_MAX_TOKENS,
@@ -76,6 +80,7 @@ export const settings: Array<ISetting> = [
         i18nLabel: AppSetting.NAMESPACE + "_MAX_TOKENS_LABEL",
         i18nDescription: AppSetting.NAMESPACE + "_MAX_TOKENS_LABEL_description",
         required: false,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_OPENAI"
     },
     {
         id: AppSetting.OpenAI_CHAT_TEMPERATURE,
@@ -86,6 +91,7 @@ export const settings: Array<ISetting> = [
         i18nLabel: AppSetting.NAMESPACE + "_TEMPERATURE_LABEL",
         i18nDescription: AppSetting.NAMESPACE + "_TEMPERATURE_LABEL_description",
         required: false,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_OPENAI"
     },
     {
         id: AppSetting.OpenAI_HELP,
@@ -99,6 +105,7 @@ export const settings: Array<ISetting> = [
         i18nLabel: AppSetting.NAMESPACE + "_HELP",
         i18nDescription: AppSetting.NAMESPACE + "_HELP_description",
         required: false,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_BOT_CONFIG"
     },
     {
         id: AppSetting.ENABLE_MENTION,
@@ -111,5 +118,6 @@ export const settings: Array<ISetting> = [
         i18nLabel: AppSetting.NAMESPACE + "_ENABLE_MENTION",
         i18nDescription: AppSetting.NAMESPACE + "_ENABLE_MENTION_description",
         required: false,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_BOT_CONFIG"
     },
 ];

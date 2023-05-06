@@ -21,7 +21,7 @@ import {
 } from "@rocket.chat/apps-engine/definition/uikit";
 import { OpenAIChatCommand } from "./commands/OpenAIChatCommand";
 import { buttons } from "./config/Buttons";
-import { settings } from "./config/Settings";
+import { AppSetting, settings } from "./config/Settings";
 import { ActionButtonHandler } from "./handlers/ActionButtonHandler";
 import { ViewSubmitHandler } from "./handlers/ViewSubmit";
 import { OpenAiCompletionRequest } from "./lib/RequestOpenAiChat";
@@ -97,14 +97,33 @@ export class OpenAiChatApp extends App implements IPostMessageSent {
         persistence: IPersistence,
         modify: IModify
     ): Promise<void> {
-        const { text, editedAt, room, sender } = message;
+        const { id: messageId, text, editedAt, room, sender } = message;
         // we only want direct with the app username
         var bot_user = await read.getUserReader().getAppUser();
+        const { username: botUsername, id: botId } = bot_user || {};
+
+        if (!messageId || !botId) return;
+
+        const msgRead = await modify.getUpdater().message(messageId, sender);
+        const mentionedUsers = msgRead['msg']['_unmappedProperties_']?.mentions || [];
+
+        const { value: ENABLE_MENTION } = await read
+        .getEnvironmentReader()
+        .getSettings()
+        .getById(AppSetting.ENABLE_MENTION);
+
+        const botMentioned = Boolean(mentionedUsers.find(user => user.username === botUsername) && ENABLE_MENTION);
+
+        const isBotMessage =
+          botMentioned ||
+          room.type === RoomType.DIRECT_MESSAGE ||
+          (room.userIds && room.userIds.includes(botId));
+
         var context: any;
         if (
             bot_user &&
-            message.room.type == RoomType.DIRECT_MESSAGE && // direct messages
-            message.room.userIds?.includes(bot_user?.id) // that has bot_user id
+            isBotMessage
+            // that has bot_user id
             // bot_user?.id !== sender.id // and was not sent by the bot itself
         ) {
             // this the bot answer, get the actual context and store it

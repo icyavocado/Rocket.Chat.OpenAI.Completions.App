@@ -15,8 +15,8 @@ export async function addReactions(
     if (!message.id || !bot_user) return;
 
     const msgBuilder = await modify
-        .getUpdater()
-        .message(message.id, bot_user);
+        .getExtender()
+        .extendMessage(message.id, message.sender);
 
     if (!msgBuilder['msg'].reactions) msgBuilder['msg'].reactions = {};
 
@@ -30,9 +30,7 @@ export async function addReactions(
         ...newReactions
     };
 
-    msgBuilder.setEditor(message.sender);
-
-    return await modify.getUpdater().finish(msgBuilder);
+    return await modify.getExtender().finish(msgBuilder);
 }
 
 export async function removeReactions(

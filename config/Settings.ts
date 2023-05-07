@@ -13,6 +13,7 @@ export enum AppSetting {
     OpenAI_CHAT_MAX_TOKENS = "openai_chat_max_tokens",
     OpenAI_CHAT_TEMPERATURE = "openai_chat_temperature",
     ENABLE_MENTION = "enable_mention",
+    ENABLE_IN_PRIVATE_ROOM = "enable_in_private_room"
 }
 
 export const settings: Array<ISetting> = [
@@ -117,6 +118,19 @@ export const settings: Array<ISetting> = [
         hidden: false,
         i18nLabel: AppSetting.NAMESPACE + "_ENABLE_MENTION",
         i18nDescription: AppSetting.NAMESPACE + "_ENABLE_MENTION_description",
+        required: false,
+        section: AppSetting.NAMESPACE + "_SETTING_SECTION_BOT_CONFIG"
+    },
+    {
+        id: AppSetting.ENABLE_IN_PRIVATE_ROOM,
+        public: true,
+        type: SettingType.BOOLEAN,
+        multiline: true,
+        packageValue: false,
+        value: false,
+        hidden: false,
+        i18nLabel: AppSetting.NAMESPACE + "_ENABLE_IN_PRIVATE_ROOM",
+        i18nDescription: AppSetting.NAMESPACE + "_ENABLE_IN_PRIVATE_ROOM_description",
         required: false,
         section: AppSetting.NAMESPACE + "_SETTING_SECTION_BOT_CONFIG"
     },

@@ -11,6 +11,7 @@ export enum AppSetting {
     OpenAI_CHAT_DEFAULT_SYSTEM_INSTRUCTION = "openai_chat_default_system_instruction",
     OpenAI_CHAT_MAX_TOKENS = "openai_chat_max_tokens",
     OpenAI_CHAT_TEMPERATURE = "openai_chat_temperature",
+    OpenAI_CHAT_TIMEOUT = "openai_chat_timeout"
 }
 
 export const settings: Array<ISetting> = [
@@ -77,6 +78,17 @@ export const settings: Array<ISetting> = [
         packageValue: null,
         hidden: false,
         i18nLabel: AppSetting.NAMESPACE + "_TEMPERATURE_LABEL",
+        required: false,
+    },
+    {
+        id: AppSetting.OpenAI_CHAT_TIMEOUT,
+        public: true,
+        type: SettingType.NUMBER,
+        packageValue: 0,
+        value: 0,
+        hidden: false,
+        i18nLabel: AppSetting.NAMESPACE + "_TIMEOUT_LABEL",
+        i18nDescription: AppSetting.NAMESPACE + "_TIMEOUT_description",
         required: false,
     },
 ];

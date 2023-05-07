@@ -6,5 +6,7 @@
     "OpenAIChat_AskChatGPT": "Ask ChatGPT",
     "OpenAIChat_SlashCommand_Description": "Ask ChatGPT",
     "OpenAIChat_TEMPERATURE_LABEL": "Temperature (Defaults to 1)",
-    "OpenAIChat_DEFAULT_SYSTEM_INSTRUCTION_LABEL": "System Instruction (how the ChatGPT should behave)"
+    "OpenAIChat_DEFAULT_SYSTEM_INSTRUCTION_LABEL": "System Instruction (how the ChatGPT should behave)",
+    "OpenAIChat_TIMEOUT_LABEL": "Request Timeout",
+    "OpenAIChat_TIMEOUT_description": "Allows you to set the timeout duration for requests. By default, it is set to 0, but you can adjust it to your desired length of time in seconds."
 }

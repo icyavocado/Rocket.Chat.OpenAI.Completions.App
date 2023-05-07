@@ -34,6 +34,10 @@ export async function OpenAiCompletionRequest(
         .getEnvironmentReader()
         .getSettings()
         .getById(AppSetting.OpenAI_CHAT_MODEL);
+    const { value: TIME_OUT } = await read
+        .getEnvironmentReader()
+        .getSettings()
+        .getById(AppSetting.OpenAI_CHAT_TIMEOUT);
     // request completion and return
     var headers = {
         Authorization: "Bearer " + API_KEY,
@@ -58,6 +62,7 @@ export async function OpenAiCompletionRequest(
         .post("https://api.openai.com/v1/chat/completions", {
             headers: headers,
             data: payload,
+            timeout : TIME_OUT
         })
         .then((ok) => {
             var result = {

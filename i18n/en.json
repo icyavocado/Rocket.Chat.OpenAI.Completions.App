@@ -10,7 +10,7 @@
     "OpenAIChat_AskChatGPT": "Ask ChatGPT",
     "OpenAIChat_SlashCommand_Description": "Ask ChatGPT",
     "OpenAIChat_Help_SlashCommand_Description": "How to use ChatGPT",
-    "OpenAIChat_HELP": "Response for /chat-gpt-help",
+    "OpenAIChat_HELP": "Response for /chatgpt-help",
     "OpenAIChat_HELP_description": "Customized message used for fetching documentation and help pages.",
     "OpenAIChat_TEMPERATURE_LABEL": "Temperature (Defaults to 1)",
     "OpenAIChat_TEMPERATURE_LABEL_description": "The temperature setting controls how creative the OpenAI chat model can be by adjusting the randomness of its responses. The value of temperature ranges from 0 to 1, with a default of 1.",

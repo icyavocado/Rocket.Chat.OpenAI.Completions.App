@@ -4,6 +4,9 @@ node_modules/
 # rc-apps package output
 dist/
 
+# rc config
+.rcappsconfig
+
 # JetBrains IDEs
 out/
 .idea/

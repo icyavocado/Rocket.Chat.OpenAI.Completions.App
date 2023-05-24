@@ -1,6 +1,6 @@
 {
     "url": "http://localhost:3000",
-    "username": "adminrc",
+    "username": "admin",
     "password": "admin",
     "ignoredFiles": [
         "**/README.md",

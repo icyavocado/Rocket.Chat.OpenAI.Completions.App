@@ -21,6 +21,7 @@ import {
 } from "@rocket.chat/apps-engine/definition/uikit";
 import { OpenAIChatCommand } from "./commands/OpenAIChatCommand";
 import { OpenAIChatHelpCommand } from "./commands/OpenAIChatHelpCommand";
+import { OpenAIImageCommand } from "./commands/OpenAIImageCommand";
 import { buttons } from "./config/Buttons";
 import { AppSetting, settings } from "./config/Settings";
 import { ActionButtonHandler } from "./handlers/ActionButtonHandler";
@@ -43,6 +44,9 @@ export class OpenAiChatApp extends App implements IPostMessageSent {
         );
         await configuration.slashCommands.provideSlashCommand(
             new OpenAIChatHelpCommand(this)
+        );
+        await configuration.slashCommands.provideSlashCommand(
+            new OpenAIImageCommand(this)
         );
         // Providing persistant app settings
         await Promise.all(

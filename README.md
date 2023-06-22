@@ -3,7 +3,6 @@ Use OpenAi Completions (ChatGPT3) inside Rocket.Chat!
 
 ## Installing this App
 
-
 You can find the [app packages here](https://github.com/icyavocado/Rocket.Chat.OpenAI.Completions.App/releases)
 
 ## Using this App
@@ -31,6 +30,18 @@ Or you can call as a message action button:
 ### Or send a direct message to the App user. The answer will come as a thread, and will consider the context
 ![image](https://user-images.githubusercontent.com/1761174/226495574-bd0fc66a-f82b-4b8e-bcc3-c5dccc4170d8.png)
 
+### Setup development environment
+
+You need to install npm packages, setup config file, and then deploy the app:
+
+```
+# Install npm packages
+npm ci
+# Duplicate the config file to deploy
+cp .rcappsconfig.dist .rcappsconfig
+# Deploy app straight to your testing environment
+npm run deploy
+```
 
 ## ROADMAP
 - Summarize Threads/Livechat

@@ -8,5 +8,8 @@
     "scripts": {
         "deploy": "rc-apps deploy",
         "package": "rc-apps package"
+    },
+    "dependencies": {
+        "eventsource-parser": "^1.0.0"
     }
 }
